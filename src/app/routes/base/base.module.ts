@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '@shared';
+
 import { BaseRoutingModule } from './base-routing.module';
-import { BaseOneComponent } from './base-one/base-one.component';
+import { CameraComponent } from './camera/camera.component';
 
 
 @NgModule({
   declarations: [
-    BaseOneComponent
+    CameraComponent
   ],
   imports: [
     CommonModule,
-    BaseRoutingModule
+    BaseRoutingModule,
+    SharedModule
   ]
 })
 export class BaseModule { }

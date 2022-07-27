@@ -1,0 +1,15 @@
+<div class="babylon-wrap">
+  <canvas #rendererCanvas id="renderCanvas" width="100%" height="100%"></canvas>
+  <div class="button-wrapper">
+    <label nz-checkbox [(ngModel)]="options.box" (ngModelChange)="toggleBox($event)">箱子</label>
+    <label nz-checkbox [(ngModel)]="options.tiled_box" (ngModelChange)="toggleTiledBox($event)">平铺箱子</label>
+    <label nz-checkbox [(ngModel)]="options.sphere" (ngModelChange)="toggleSphere($event)">球</label>
+    <label nz-checkbox [(ngModel)]="options.cylinder" (ngModelChange)="toggleCylinder($event)">柱体</label>
+    <label nz-checkbox [(ngModel)]="options.capsule" (ngModelChange)="toggleCapsule($event)">胶囊</label>
+    <label nz-checkbox [(ngModel)]="options.plane" (ngModelChange)="togglePlane($event)">平面</label>
+    <label nz-checkbox [(ngModel)]="options.tiled_plane" (ngModelChange)="toggleTiledPlane($event)">平铺平面</label>
+    <label nz-checkbox [(ngModel)]="options.disc" (ngModelChange)="toggleDisc($event)">disc</label>
+    <label nz-checkbox [(ngModel)]="options.torus" (ngModelChange)="toggleTorus($event)">torus</label>
+    <label nz-checkbox [(ngModel)]="options.torus_knot" (ngModelChange)="toggleTorusKnot($event)">torus-knot</label>
+  </div>
+</div>

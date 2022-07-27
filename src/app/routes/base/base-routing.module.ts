@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {BaseOneComponent} from "./base-one/base-one.component";
+import { CameraComponent} from "./camera/camera.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'base-one', pathMatch: 'full' },
-  { path: 'base-one', component: BaseOneComponent },
+  { path: '', redirectTo: 'camera', pathMatch: 'full' },
+  { path: 'camera', component: CameraComponent },
 ];
 
 @NgModule({
