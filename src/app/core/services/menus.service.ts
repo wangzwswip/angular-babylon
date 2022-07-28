@@ -8,7 +8,7 @@ export class MenusService {
   constructor() { }
   _Menus = [
     {
-      title: 'babylon基础',
+      title: '相机',
       link: '',
       icon: 'node-index',
       level: 1,
@@ -18,11 +18,20 @@ export class MenusService {
       children: [
         {
           title: '相机',
-          link: 'babylon/camera',
+          link: 'camera/camera-base',
           icon: '',
           level: 2,
           open: false,
           selected: true,
+          disabled: false,
+        },
+        {
+          title: '相机碰撞',
+          link: 'camera/camera-crash',
+          icon: '',
+          level: 2,
+          open: false,
+          selected: false,
           disabled: false,
         },
       ]

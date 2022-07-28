@@ -1,0 +1,10 @@
+<div class="camera-base">
+  <canvas #rendererCanvas id="renderCanvas" width="100%" height="100%"></canvas>
+  <div class="button-wrapper">
+    <label nz-checkbox nzDisabled [(ngModel)]="options.universal_camera" (ngModelChange)="toggleUniversalCamera($event)">通用相机</label>
+    <label nz-checkbox [(ngModel)]="options.rot_camera" (ngModelChange)="toggleRotCamera($event)">弧形旋转相机</label>
+    <label nz-checkbox [(ngModel)]="options.follow_camera" (ngModelChange)="toggleFollowCamera($event)">跟随相机</label>
+    <label nz-checkbox [(ngModel)]="options.cylinder" (ngModelChange)="toggleCylinder($event)">设备方向相机</label>
+    <label nz-checkbox [(ngModel)]="options.capsule" (ngModelChange)="toggleCapsule($event)">虚拟操纵杆相机</label>
+  </div>
+</div>

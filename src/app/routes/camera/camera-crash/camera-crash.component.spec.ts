@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaseOneComponent } from './base-one.component';
+import { CameraCrashComponent } from './camera-crash.component';
 
-describe('BaseOneComponent', () => {
-  let component: BaseOneComponent;
-  let fixture: ComponentFixture<BaseOneComponent>;
+describe('CameraCrashComponent', () => {
+  let component: CameraCrashComponent;
+  let fixture: ComponentFixture<CameraCrashComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BaseOneComponent ]
+      declarations: [ CameraCrashComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BaseOneComponent);
+    fixture = TestBed.createComponent(CameraCrashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

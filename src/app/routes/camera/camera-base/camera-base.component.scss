@@ -1,4 +1,4 @@
-.babylon-wrap {
+.camera-base {
   width: 100%;
   height: 100%;
   position: relative;
@@ -7,6 +7,7 @@
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0);
+    vertical-align: bottom; // 否则会出现滚动条
   }
   .button-wrapper {
     position: absolute;
@@ -25,4 +26,7 @@
 }
 :host ::ng-deep .ant-checkbox-wrapper{
   color: #fff;
+}
+:host ::ng-deep .ant-checkbox-disabled + span {
+  color: rgba(255, 255, 255, 0.7);
 }

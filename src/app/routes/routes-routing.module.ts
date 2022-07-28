@@ -8,10 +8,10 @@ const routes: Routes = [
     path: 'default',
     component: DefaultComponent,
     children: [
-      { path: '', redirectTo: 'base', pathMatch: 'full' },
+      { path: '', redirectTo: 'camera', pathMatch: 'full' },
       {
-        path: 'base',
-        loadChildren: () => import('./base/base.module').then(m => m.BaseModule)
+        path: 'camera',
+        loadChildren: () => import('./camera/camera.module').then(m => m.CameraModule)
       },
     ]
   },
