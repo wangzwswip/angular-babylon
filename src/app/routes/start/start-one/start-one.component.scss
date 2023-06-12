@@ -1,0 +1,12 @@
+.start-one {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  canvas {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    vertical-align: bottom; // 否则会出现滚动条
+  }
+}

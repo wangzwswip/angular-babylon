@@ -6,6 +6,7 @@ import {
   Mesh,
   Color3,
   Color4,
+  Camera,
   Vector3,
   Vector4,
   HemisphericLight,
@@ -145,7 +146,11 @@ export class BabylonEngin {
       this.scene?.switchActiveCamera(newCamera, true)
     }
   }
-
+  createFreCamera(name = 'free-camera', vector = [3 ,3, 3]) {
+    const _vector = new Vector3(vector[0], vector[1], vector[2])
+    this.camera = new FreeCamera('free-camera',_vector)
+    this.camera.attachControl(this.canvas, true);
+  }
   /**
    * @description 创建通用相机
    * @param {string} [name='universal-camera'] 相机名称
@@ -155,6 +160,8 @@ export class BabylonEngin {
     const _vector = new Vector3(vector[0], vector[1], vector[2])
     this.universalCamera = new UniversalCamera("UniversalCamera",_vector, this.scene);
     this.universalCamera.setTarget(Vector3.Zero());
+    // Enable mouse wheel inputs.
+    this.universalCamera.inputs.addMouseWheel();
     this.universalCamera.attachControl(this.canvas, true);
   }
 
@@ -169,9 +176,26 @@ export class BabylonEngin {
     // 创建相机
     // @ts-ignore
     this.arcRotateCamera = new ArcRotateCamera(_options.name, _options.alpha, _options.beta, _options.radius, _options.vectors, this.scene)
-    this.arcRotateCamera.attachControl(this.canvas, true)
-    this.arcRotateCamera.setTarget(Vector3.Zero());
-    // this.arcRotateCamera.zoomToMouseLocation = true
+    this.arcRotateCamera.attachControl(this.canvas, false)
+    // this.arcRotateCamera.setTarget(Vector3.Zero());
+    this.arcRotateCamera.zoomToMouseLocation = true
+    // 添加鼠标平移视角的输入设备
+//     this.arcRotateCamera.inputs.addMouseWheel();
+//     this.arcRotateCamera.inputs.addPointers();
+//     this.arcRotateCamera.inputs.addKeyboard();
+//     this.arcRotateCamera.inputs.attached['mousewheel'].detachControl();
+//     this.arcRotateCamera.inputs.attached['pointers'].detachControl();
+//     this.arcRotateCamera.inputs.attached['keyboard'].detachControl();
+//
+// // 修改相机的 inputs 属性，以支持鼠标平移视角
+//     this.arcRotateCamera.inputs.attached['pointers'].buttons = [0, 1, 2];
+//     this.arcRotateCamera.inputs.attached.pointers.angularSensibilityX = -500;
+//     this.arcRotateCamera.inputs.attached.pointers.angularSensibilityY = -500;
+//     this.arcRotateCamera.inputs.attached.pointers.pinchPrecision = 200;
+//     this.arcRotateCamera.inputs.attached.keyboard.keysUp.push(87); // W
+//     this.arcRotateCamera.inputs.attached.keyboard.keysDown.push(83); // S
+//     this.arcRotateCamera.inputs.attached.keyboard.keysLeft.push(65); // A
+//     this.arcRotateCamera.inputs.attached.keyboard.keysRight.push(68); // D
   }
 
   creatFollowCamera(name = 'follow-camera', position = [0, 10, -10]) {

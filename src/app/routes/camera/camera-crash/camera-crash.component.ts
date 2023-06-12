@@ -23,6 +23,12 @@ export class CameraCrashComponent implements OnInit {
       this.start();
     }
   }
+  ngOnDestroy(): void {
+    if (this.babylonTarget) {
+      this.babylonTarget.scene?.dispose();
+    }
+
+  }
 
   start () {
     this.ngZone.runOutsideAngular(() => {

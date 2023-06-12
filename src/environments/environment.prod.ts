@@ -1,6 +1,6 @@
-import { PRODCTION_API } from '../config';
+import { PRODUCTION_API } from '../config';
 
-export const api = PRODCTION_API;
+export const api = PRODUCTION_API;
 export const environment = {
   production: true,
   development: false

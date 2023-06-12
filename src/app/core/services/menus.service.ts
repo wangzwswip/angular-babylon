@@ -36,44 +36,36 @@ export class MenusService {
         },
       ]
     },
-    // {
-    //   title: '其他',
-    //   link: '',
-    //   icon: 'node-index',
-    //   level: 1,
-    //   open: false,
-    //   selected: false,
-    //   disabled: false,
-    //   children: [
-    //     {
-    //       title: '父子通信',
-    //       link: 'other/connection',
-    //       icon: '',
-    //       level: 2,
-    //       open: false,
-    //       selected: false,
-    //       disabled: false,
-    //     },
-    //     {
-    //       title: '录屏',
-    //       link: 'other/screen',
-    //       icon: '',
-    //       level: 2,
-    //       open: false,
-    //       selected: false,
-    //       disabled: false,
-    //     },
-    //     {
-    //       title: '录音',
-    //       link: 'other/recorde',
-    //       icon: '',
-    //       level: 2,
-    //       open: false,
-    //       selected: false,
-    //       disabled: false,
-    //     },
-    //   ]
-    // }
+    {
+      title: '开始',
+      link: '',
+      icon: 'node-collapse',
+      level: 1,
+      open: false,
+      selected: false,
+      disabled: false,
+      children: [
+        {
+          title: '开始-1',
+          link: 'start/start-one',
+          icon: '',
+          level: 2,
+          open: false,
+          selected: false,
+          disabled: false,
+        },
+        {
+          title: '开始-2',
+          link: 'start/start-two',
+          icon: '',
+          level: 2,
+          open: false,
+          selected: false,
+          disabled: false,
+        },
+      ]
+    },
+
   ];
   menus() {
     return this._Menus;

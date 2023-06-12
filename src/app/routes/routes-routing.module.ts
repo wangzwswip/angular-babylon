@@ -13,6 +13,10 @@ const routes: Routes = [
         path: 'camera',
         loadChildren: () => import('./camera/camera.module').then(m => m.CameraModule)
       },
+      {
+        path: 'start',
+        loadChildren: () => import('./start/start.module').then(m => m.StartModule)
+      },
     ]
   },
 ];

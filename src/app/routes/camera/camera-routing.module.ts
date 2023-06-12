@@ -4,7 +4,7 @@ import {CameraCrashComponent} from "./camera-crash/camera-crash.component";
 import {CameraBaseComponent} from "./camera-base/camera-base.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'camera', pathMatch: 'full' },
+  { path: '', redirectTo: 'camera-base', pathMatch: 'full' },
   { path: 'camera-base', component: CameraBaseComponent },
   { path: 'camera-crash', component: CameraCrashComponent }
 ];

@@ -17,7 +17,7 @@ export const DEVELOP_API = {
   STATIC_URL,
 };
 
-export const PRODCTION_API = {
+export const PRODUCTION_API = {
   API_ROOT: 'http://127.0.0.1:4523/mock/613874',
   STATIC_URL
 };
