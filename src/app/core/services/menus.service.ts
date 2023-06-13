@@ -63,6 +63,15 @@ export class MenusService {
           selected: false,
           disabled: false,
         },
+        {
+          title: '开始-3',
+          link: 'start/start-three',
+          icon: '',
+          level: 2,
+          open: false,
+          selected: false,
+          disabled: false,
+        },
       ]
     },
 
